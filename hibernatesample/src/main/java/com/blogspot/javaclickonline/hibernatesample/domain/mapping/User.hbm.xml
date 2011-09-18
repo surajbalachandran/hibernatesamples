@@ -24,7 +24,7 @@
 			<key column="userId"/>
 			<element type="string" column="email"/>
 		</set>
-		<set name="events" table="JCO_USER_EVENTS" lazy="false">
+		<set name="events" table="JCO_USER_EVENTS">
 			<key column="userId"/>
 			<many-to-many column="eventId" class="Event"/>
 		</set>

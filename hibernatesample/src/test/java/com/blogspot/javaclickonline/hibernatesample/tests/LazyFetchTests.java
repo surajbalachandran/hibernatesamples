@@ -25,7 +25,7 @@ public class LazyFetchTests {
 	public void testLazyFetch1() {
 		
 		// By default, it is lazy fetching. So for this example, I made user events eager fetching
-		
+		// For now comment lazy=false in User.hbm.xml. Make true before running this test.
 		Session session = factory.openSession();
 		session.beginTransaction();
 		
