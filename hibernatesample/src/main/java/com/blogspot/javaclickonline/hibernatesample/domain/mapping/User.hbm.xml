@@ -28,5 +28,9 @@
 			<key column="userId"/>
 			<many-to-many column="eventId" class="Event"/>
 		</set>
+		<set name="communications" table="JCO_COMMUNICATION" cascade="all">
+			<key column="USER_ID"/>
+			<one-to-many class="Communication"/>
+		</set>
 	</class>
 </hibernate-mapping>

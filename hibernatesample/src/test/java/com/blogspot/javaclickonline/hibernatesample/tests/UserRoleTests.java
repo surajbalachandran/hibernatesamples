@@ -53,6 +53,7 @@ public class UserRoleTests {
 		
 		Query query = session.createQuery("from User where userName = :userName");
 		query.setParameter("userName", userName);
+		@SuppressWarnings("unchecked")
 		List<User> users = query.list();
 		
 		User user = users.get(0);

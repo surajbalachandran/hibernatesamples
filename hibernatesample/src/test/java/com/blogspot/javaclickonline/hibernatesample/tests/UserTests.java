@@ -71,6 +71,7 @@ public class UserTests {
 		session.beginTransaction();
 		
 		Query query = session.createQuery("from User");
+		@SuppressWarnings("unchecked")
 		List<User> users = query.list();
 		
 		for(User user : users) {

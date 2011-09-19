@@ -7,8 +7,6 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
 
-import org.apache.commons.lang.builder.ToStringBuilder;
-
 /**
  * @author suraj.balachandran
  *
@@ -28,7 +26,22 @@ public class User implements Serializable {
 	private Set<Role> userRoles;
 	private Set<String> emails;
 	private Set<Event> events;
+	private Set<Communication> communications;
 	
+	/**
+	 * @return the communications
+	 */
+	public Set<Communication> getCommunications() {
+		return communications;
+	}
+
+	/**
+	 * @param communications the communications to set
+	 */
+	public void setCommunications(Set<Communication> communications) {
+		this.communications = communications;
+	}
+
 	/**
 	 * @return the events
 	 */

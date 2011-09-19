@@ -27,6 +27,10 @@
   <mapping resource="com/blogspot/javaclickonline/hibernatesample/domain/mapping/User.hbm.xml"/>
   <mapping resource="com/blogspot/javaclickonline/hibernatesample/domain/mapping/Role.hbm.xml"/>
   <mapping resource="com/blogspot/javaclickonline/hibernatesample/domain/mapping/Event.hbm.xml"/>
- 
+  <mapping resource="com/blogspot/javaclickonline/hibernatesample/domain/mapping/Communication.hbm.xml"/>
+  <mapping resource="com/blogspot/javaclickonline/hibernatesample/domain/mapping/Customer.hbm.xml"/>
+  <mapping resource="com/blogspot/javaclickonline/hibernatesample/domain/mapping/Dealership.hbm.xml"/>
+  <mapping resource="com/blogspot/javaclickonline/hibernatesample/domain/mapping/Location.hbm.xml"/>
+  
  </session-factory>
 </hibernate-configuration>

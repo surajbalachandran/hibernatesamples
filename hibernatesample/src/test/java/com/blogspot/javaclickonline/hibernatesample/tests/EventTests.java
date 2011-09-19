@@ -42,6 +42,7 @@ public class EventTests {
 		session = factory.openSession();
 		Query query = session.createQuery("from Event e where e.eventName = :eventName");
 		query.setParameter("eventName", "Onam celebrations - 09/17");
+		@SuppressWarnings("unchecked")
 		List<Event> eventsList = query.list();
 
 		List<String> eventsStrList = new ArrayList<String>();
