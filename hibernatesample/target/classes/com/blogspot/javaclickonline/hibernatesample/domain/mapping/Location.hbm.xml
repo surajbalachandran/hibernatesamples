@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.blogspot.javaclickonline.hibernatesample.domain">
+	<subclass name="Location" discriminator-value="LOCATION" extends="Customer">
+		<join table="JCO_LOCATION">
+			<key column="LOCATION_ID"/>
+			<property name="locationNo" column="LOCATION_NO" />
+			<property name="locationName" column="LOCATION_NAME" />
+		</join>
+	</subclass>
+</hibernate-mapping>

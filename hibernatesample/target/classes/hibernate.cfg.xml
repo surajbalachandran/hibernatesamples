@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory>
+  <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+  <property name="connection.url">jdbc:mysql://localhost:3306/hibernatesampledb</property>
+  <property name="connection.username">root</property>
+  <property name="connection.password"/>
+  <property name="connection.pool_size">1</property>
+ 
+  <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+  <property name="current_session_context_class">thread</property>
+<!--   <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property> -->
+  
+  <property name="hibernate.generate_statistics">true</property>
+  
+  <property name="hibernate.cache.region.factory_class">net.sf.ehcache.hibernate.EhCacheRegionFactory</property>
+  <property name="hibernate.cache.use_second_level_cache">true</property>
+  <property name="hibernate.cache.use_query_cache">true</property>
+  <property name="hibernate.cache.region_prefix">JCO_RG</property>
+  
+  <property name="show_sql">true</property>
+  <property name="format_sql">true</property>
+  <property name="hbm2ddl.auto">update</property>
+  
+  <mapping resource="com/blogspot/javaclickonline/hibernatesample/domain/mapping/User.hbm.xml"/>
+  <mapping resource="com/blogspot/javaclickonline/hibernatesample/domain/mapping/Role.hbm.xml"/>
+  <mapping resource="com/blogspot/javaclickonline/hibernatesample/domain/mapping/Event.hbm.xml"/>
+  <mapping resource="com/blogspot/javaclickonline/hibernatesample/domain/mapping/Communication.hbm.xml"/>
+  <mapping resource="com/blogspot/javaclickonline/hibernatesample/domain/mapping/Customer.hbm.xml"/>
+  <mapping resource="com/blogspot/javaclickonline/hibernatesample/domain/mapping/Dealership.hbm.xml"/>
+  <mapping resource="com/blogspot/javaclickonline/hibernatesample/domain/mapping/Location.hbm.xml"/>
+  
+ </session-factory>
+</hibernate-configuration>

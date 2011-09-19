@@ -28,7 +28,7 @@ public class InheritanceTests {
 		
 		Dealership dealership = new Dealership();
 		dealership.setCustomerName("Tom Wood Nissan");
-		dealership.setCustomerType("DEALERSHIP");
+//		dealership.setCustomerType("DEALERSHIP");
 		dealership.setDbaName("H&I Tom Wood Nissan");
 		dealership.setDealerNo("02345");
 		
@@ -44,7 +44,7 @@ public class InheritanceTests {
 		
 		Location location = new Location();
 		location.setCustomerName("Atlanta Auction");
-		location.setCustomerType("LOCATION");
+//		location.setCustomerType("LOCATION");
 		location.setLocationName("SB Atlanta Auction");
 		location.setLocationNo("12");
 		

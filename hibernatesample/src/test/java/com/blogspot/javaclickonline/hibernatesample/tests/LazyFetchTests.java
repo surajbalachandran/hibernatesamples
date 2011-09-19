@@ -1,5 +1,8 @@
 package com.blogspot.javaclickonline.hibernatesample.tests;
 
+import java.util.List;
+
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -35,6 +38,24 @@ public class LazyFetchTests {
 		User user2 = (User) session.load(User.class, 2l);
 		System.out.println(user2);
 		
+		session.getTransaction().commit();
+	}
+	
+	@Test
+	public void testLazyFetch2() {
+		
+		// By default, it is lazy fetching. So for this example, I made user events eager fetching
+		// For now comment lazy=false in User.hbm.xml. Make true before running this test.
+		Session session = factory.openSession();
+		session.beginTransaction();
+		
+		Query query = session.createQuery("from User");
+		List<User> users = query.list();
+		
+		for(User user : users) {
+			
+			System.err.println(user);
+		}
 		session.getTransaction().commit();
 	}
 }
